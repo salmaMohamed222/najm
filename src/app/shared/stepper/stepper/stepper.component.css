@@ -1,0 +1,207 @@
+/* 
+.contain { 
+    width: 100%; 
+    overflow: hidden; 
+} 
+.steppers{ 
+    display: flex; 
+    flex-direction: row; 
+    width: 119%; 
+    flex-wrap: wrap; 
+    gap: 5px; 
+    justify-content: space-between; 
+    overflow: hidden !important; 
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    counter-reset: step;
+    position: relative;
+
+} 
+.stepword {
+    font-family: Tajawal;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.step > .stepicon {
+    font-family: Tajawal;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid  #ddd;
+    display: block;
+    text-align: center;
+    background-color: #FFF;
+    z-index: 1;
+}
+.stepword {
+    background-color: #FFF;
+    z-index: 1;
+    padding:0px 10px;
+}
+.step:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    top: 17px;
+    border-radius: 1px;
+}
+.step.completed:after {
+    content: '';
+    background-color: #33835C;
+}
+.step:last-child:after {
+    content: none;
+}
+.active > div {
+    color: #33835C;
+}
+.active > .stepicon {
+    border: 1px solid #33835C;
+}
+.laststep {
+    background-color: #33835C !important;
+    color: #FFF !important;
+    line-height: 33px !important;
+    z-index: 1;
+    border: none !important;
+}
+.laststepword {
+    color: #33835C !important;
+}
+.greenLine:after {
+    background-color: #33835C;
+}
+.iconnn {
+    display: none;
+}
+.no {
+    display:block;
+}
+ */
+
+
+
+
+ .form-step {
+    display: none;
+    animation: animate 0.5s;
+    transform-origin: top;
+}
+.form-step-active {
+    display: block;
+}
+
+/* progress bar */
+.progress-step {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    border-radius: 20px;
+    border: 1px solid #E4E4E4;
+    background: #F4F4F4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Tajawal;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+
+}
+.step-active {
+    background-color: #fff;
+    border: 1px solid #33835C;
+    color: #33835C;
+}
+.progressBefore {
+    display: block;
+    counter-increment: step;
+    content: counter(step);
+    z-index: 120;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+}
+.background {
+    background-color: #fff;
+    z-index: 99;
+    padding: 0px 10px;
+}
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+}
+.progressbar::before, .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 100%;
+    background-color: #dcdcdc;
+    /* z-index: 123; */
+}
+progress {
+    background-color: var(--primary-color);
+    width: 0%;
+}
+
+.progress-step-active {
+    background-color: #33835C;
+    color: #fff;
+    z-index: 13;
+    content: "";
+}
+
+
+.step-label {
+    color: #55565A;
+    background-color: #fff;
+    z-index: 1;
+    padding: 0px 10px 0px 0px;
+    font-family: Tajawal;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.step-label-active {
+    color: #33835C;
+    z-index: 1;
+    padding: 0px 10px;
+}
+.appear {
+    display: none;
+    font-size: 22px;
+    vertical-align: -0.2;
+}
+::ng-deep .appear::before {
+    vertical-align: -0.2em;
+    font-size: 25px; 
+}
+@keyframes animate {
+    from {
+        transform:scale(1, 0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+} 

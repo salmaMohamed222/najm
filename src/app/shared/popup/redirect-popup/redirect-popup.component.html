@@ -1,0 +1,34 @@
+<div class="header"> 
+  <span>إعادة توجيه</span>
+  <span (click)="closeDialog()"><i class="bi bi-x fs-2" style="cursor: pointer;"></i></span>
+</div>
+<!-- <div class="contain"> -->
+<form class="contain" id="form" [formGroup]="inputForm" (ngSubmit)="saveData($event)">
+  <!-- <label id="desc" for="textarea">{{title}}</label>
+  <textarea
+  [class.is-invalid]="inputForm.get('textarea')?.invalid && inputForm.get('textarea')?.touched"
+   class="textarea" 
+   formControlName="textarea" 
+   id="textarea" name="textarea" rows="4" cols="50" 
+   placeholder="اكتب هنا" required> </textarea>
+   <div *ngIf="inputForm.get('textarea')?.errors?.['required']" class="invalid-feedback"> هذا الحقل مطلوب </div> -->
+
+  <div class="smallInput">
+      <div class="inputandlabel">
+        <label class="label" for="country"> القسم الموجه إليه البلاغ</label>
+        <app-select  title="المدينة" [options]="section"  name="country"  class="boxselect w-100"></app-select>
+       </div>
+       <div class="inputandlabel">
+        <label class="label" for="branch">اسم الشخص</label>
+        <app-select title="الفرع" name="branch" [options]="username"  class="boxselect d-flex flex-column col-sm-4 col-md-3 col-lg w-100"  ></app-select>
+      </div>
+  </div>
+
+<div style="display: flex; justify-content: end !important; width: 100%;">
+<p-toast [breakpoints]="{'920px': {width: '100%', right: '0', left: '0'}}"></p-toast>
+<button [disabled]="!inputForm.valid"  type="button" pButton pRipple (click)="showSuccess()" label="Success" class="btn button">تأكيد</button>
+
+
+</div>
+
+</form>

@@ -1,0 +1,20 @@
+
+
+
+<div class="box" [ngStyle]="{ 'padding': paddingg }">
+  <div class="accordion" [id]="accordionId">
+    <div class="accordion-item d-flex justify-content-between w-100">
+      <span class="title accordion-header" [id]="headerId">{{title}}</span>
+      <hr *ngIf="cord" style="flex: 1; margin: 25px 15px;  display: flex; align-items: center; justify-content: center;">
+      <button *ngIf="cord" class="btn accordion-button" type="button" (click)="toggleAccordion(icon)">
+        <img #icon src="assets/cordicon.svg" class="me-4 icon" />
+      </button>
+    </div>
+
+    <div [id]="collapseId" class="accordion-collapse collapse" [ngClass]="{'show': isOpen}" [attr.aria-labelledby]="headerId" [attr.data-bs-parent]="accordionId">
+      <div class="accordion-body">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

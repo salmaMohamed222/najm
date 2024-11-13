@@ -1,0 +1,16 @@
+<!-- <nav aria-label="breadcrumb">
+  <ol class="breadcrumb flex-lg-nowrap justify-content-center justify-content-lg-start">
+    <li class="breadcrumb-item"><a class="home-link text-nowrap" href="/home" style="text-decoration: none; color:  #212529;"><img src="assets/breadcrumb.svg"/>البلاغات</a></li>
+    <li class="breadcrumb-item text-nowrap active" aria-current="page" style="color: #ec960b;">Shop</li>
+  </ol>
+</nav> -->
+
+
+<nav  style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" >
+  <ol class="breadcrumb" style="direction: ltr; margin: 0px;">
+    <li class="breadcrumb-item active">{{subpage}}</li>
+    <li *ngIf="page !== null" class="breadcrumb-item " aria-current="page">  <a [href]="href" style="text-decoration: none;"> {{page}} </a> </li>
+    <img src="assets/breadcrumb.svg" class="ps-1"/>
+  
+  </ol>
+</nav>

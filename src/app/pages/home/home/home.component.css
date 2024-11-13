@@ -1,0 +1,84 @@
+
+
+.main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    /* background-image: url('../../../../assets/main.svg');  */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ #logoImage {
+    position: absolute;
+    top: 0px;
+    right: 60px;
+    z-index: 1;
+ }
+ #card {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+    border-radius: 10px;
+    border: 1px solid  rgba(255, 255, 255, 0.30);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 148.2%);
+    backdrop-filter: blur(22px);
+    /* flex-wrap: wrap; */
+ }
+ .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+ }
+ .activecardd {
+    border: 2px solid #33835C;
+}
+ .cardd {
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #33835C;
+    background: #FFF;
+    display: flex;
+    height: 140px;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #33835C;
+    text-align: center;
+    font-family: Tajawal;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    flex-wrap: wrap;
+    cursor: pointer;
+ }
+ .checkicon {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+@media (max-width: 580px) {
+    .cardd {
+        width: 80%;
+    }
+    #logoImage {
+        position: absolute;
+        top: 0px;
+        right: 30px;
+        z-index: 1;
+     }
+     .main{
+        height: max-content;
+     }
+}

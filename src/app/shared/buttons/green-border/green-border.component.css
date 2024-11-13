@@ -1,0 +1,21 @@
+.greenbutton {
+    background: #FFF;
+    box-shadow: 0px 0px 6px 0px rgba(160, 160, 160, 0.05);
+    height: 36px;
+    color: #33835C;
+    font-family: Tajawal;
+    font-style: normal;
+    letter-spacing: 0.15px;
+    width: 100%;
+    border: 1px solid #33835C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.greenbutton:focus:active {
+    background: #e6e6e6;
+    box-shadow: 0px 0px 6px 0px rgba(160, 160, 160, 0.05);
+    height: 36px;
+    color: #33835cd2;
+    border: 1px solid #33835cd2;
+}

@@ -1,0 +1,21 @@
+.bluebutton {
+    border-radius: 5px;
+    background: #3865A3;
+    box-shadow: 0px 0px 6px 0px rgba(160, 160, 160, 0.05);
+    height: 36px;
+    /* padding: 0px 15px; */
+    color: #FFF;
+    font-family: Tajawal;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.15px;
+}
+.bluebutton:focus:active {
+    background: #3865A3d2;
+    box-shadow: 0px 0px 6px 0px rgba(160, 160, 160, 0.05);
+    height: 36px;
+    color: #FFF;
+    border: 1px solid #3865A3d2;
+}

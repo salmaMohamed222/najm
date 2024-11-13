@@ -1,0 +1,57 @@
+<div class="contain d-flex flex-column">
+    <!-- progress bar -->
+     <div class="progressbar">
+       <div class="progress" id="progress"></div>
+       <ng-container *ngFor="let title of titleArr, let i = index">
+        <div [class.px-0]="i===0" class="d-flex justify-content-center align-items-center background">
+          <div class="progress-step " [class.step-active]="i === 0" style="position: relative;">
+            <i class="bi bi-check-lg appear"></i>
+            <div class="progressBefore">{{i + 1}}</div>
+          </div>
+          <diV class="step-label" [class.step-label-active]="i === 0">{{title}}</diV>
+        </div>
+       </ng-container>
+     </div>
+     
+
+    <!-- steps -->
+    <div class="form-step form-step-active" >
+       <ng-content select=".step1"></ng-content>
+
+      <div class="d-flex justify-content-between" style="margin-top: 40px;">
+        <app-green-border  [isdisabled]="true"  [functionOnClick]="onPrevFunction"  fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px"></app-green-border>
+        <app-green-button  [isdisabled]="true"  [functionOnClick]="onNextFunction" fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px"  title="التالي" icon="bi bi-arrow-left"></app-green-button>
+      </div>
+    </div>
+
+     <div class="form-step">
+       <ng-content select=".step2"></ng-content>
+
+     <div class="d-flex justify-content-between" style="margin-top: 40px;">
+      <app-green-border  [functionOnClick]="onPrevFunction"  fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px" ></app-green-border>
+      <app-green-button  [isdisabled]="activeDivs.length === 0" [functionOnClick]="onNextFunction" fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px" title="التالي" icon="bi bi-arrow-left"></app-green-button>
+    </div>
+     </div>
+
+    <div class="form-step">
+      <ng-content select=".step3"></ng-content>
+
+       <div class="d-flex justify-content-between" style="margin-top: 40px;">
+        <app-green-border  [functionOnClick]="onPrevFunction" fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px"></app-green-border>
+        <app-green-button  [functionOnClick]="onNextFunction"  fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px" title="معاينة البلاغ"></app-green-button>
+      </div>
+    </div>
+
+    <div class="form-step">
+      <ng-content select=".step4"></ng-content>
+ 
+        <div class="d-flex justify-content-between" style="margin-top: 40px;">
+          <app-green-border  [functionOnClick]="onPrevFunction" fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px"></app-green-border>
+          <app-green-button  [functionOnClick]="onNextFunction" fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px" title="تأكيد"></app-green-button>
+        </div>
+       </div>
+      
+</div>
+
+
+<!-- class='btn-next' -->

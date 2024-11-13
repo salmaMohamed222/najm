@@ -1,0 +1,56 @@
+.textarea {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #DBDBDB;
+    background: #FFF;
+    direction: rtl !important;
+    padding: 15px;
+    resize: none;
+    width: 100%;
+    color: #656565;
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .textarea:focus {
+    border: 2px solid #33835c91;
+    outline: none !important;
+  }
+
+.form-check-input {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+}
+.form-check-label {
+  /* font-size: 15px; */
+}
+.form-check-input:checked {
+  background-color: #33835C;
+  border-color: #33835C;
+}
+.form-check-input:focus {
+  border-color: #33835C;
+  outline: 0;
+  box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.584);
+}
+.form-check {
+  color: #1E1E1E;
+  text-align: right;
+  font-family: Tajawal;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+}

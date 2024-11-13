@@ -1,0 +1,13 @@
+<div class="box" [ngStyle]="{'background-color': backgroundColor, 'border': bordder}">
+  <div class="header" *ngIf="!cord">
+    <span class="title">{{title}}</span>
+    <img (click)="redirect(redirectPageNo)" src="assets/edit.svg" />
+  </div>
+  <div  *ngIf="!cord" style="border: 1px solid rgba(0, 0, 0, 0.09);"></div>
+   <div class="contain" *ngIf="divs.length > 0">
+        <div *ngFor="let div of divs; let i = index" class="text">{{ div }}</div>
+   </div>
+   <div *ngIf="divs.length === 0">
+       <ng-content></ng-content>
+     </div>
+   </div>

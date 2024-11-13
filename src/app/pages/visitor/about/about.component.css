@@ -1,0 +1,112 @@
+#carouselExampleSlidesOnly[_ngcontent-ng-c4023326979] {
+    z-index: -1;
+}
+.carousel {
+    z-index: -1;
+}
+
+.aboutimg {
+    padding-bottom: 10px;
+    position: relative !important;
+    width: 100%;
+    border-radius: 25px;
+}
+#aboutTitle {
+    color: #33835C;
+    font-family: Tajawal;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    
+}
+.contain {
+    padding: 61px;
+}
+.text{
+ text-align: right;
+}
+#contentText {
+    color: rgba(0, 0, 0, 0.75);
+    font-family: Tajawal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+.textOnImg {
+    position: absolute;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    top: 275px;
+    right: 60px;
+}
+#textImg {
+    color: #FFF;
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.button {
+    display: flex;
+    padding: 0px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #33835C;
+    color: #FFF;
+    font-family: Tajawal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    height: 48px;
+    text-transform: capitalize;
+    margin-top: 35px;
+}
+.button:active:focus {
+  background-color: #FFF;
+  border: #33835C;
+  border: 2px solid;
+  color:  #33835C;
+}
+@media (max-width: 1300px) {
+    #textImg {
+        font-size:38px;
+    }
+    .textOnImg {
+        top: 235px;
+    }
+}
+@media (max-width: 1100px) {
+    #textImg {
+        font-size:30px;
+    }
+    .textOnImg {
+        top: 185px;
+    }
+    .button {
+        height: 38px;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 700px) {
+ #textImg {
+    font-size:22px;
+    }
+ .textOnImg {
+    top: 160px;
+    }
+ .button {
+    height: 30px;
+    margin-top: 7px;
+    }
+}
+@media (max-width: 500px) {
+    #textImg {
+       font-size:16px;
+       }
+   }

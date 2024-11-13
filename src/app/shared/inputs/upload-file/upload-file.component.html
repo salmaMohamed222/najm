@@ -1,0 +1,49 @@
+<div class="contain overlay"> 
+  <div class="w-100 d-flex flex-column justify-content-end" style="direction: rtl !important;"> 
+      <div class="label">البيانات او المستندات الداعمة للإشتباه</div> 
+      <!-- <p-toast ></p-toast> -->
+      <label class="attach text-end" for="attach"> ارفق من هنا <img src="assets/uploadicon.svg" class="pe-2" /> </label> 
+      <input  type="file" id="attach" name="attach"  (change)="onFileSelected($event)" multiple> 
+     </div> 
+
+      <div class="border"> 
+          <div class="text">الصور و الفيديوهات ({{imageNo}})</div> 
+          <div class="images"> 
+            <div *ngFor="let file of imageFiles, let i = index" style="position: relative;" class="image-container"> 
+              
+              <img *ngIf="isImage(file)" [src]="file.url" alt="{{ file.name }}" class="preview-image"> 
+              <video ngClass="videoOutModal" *ngIf="isVideo(file)" [src]="file.url" class="preview-image" muted (play)="expandImg(i)"></video>
+              <div *ngIf="isImage(file)" class="expand" > 
+                <img src="assets/deleteicon.svg" (click)="deleteImg(file)" alt="Delete Icon"> 
+                <img src="assets/expandicon.svg" (click)="expandImg(i)"  alt="Expand Icon"> 
+              </div> 
+
+              <div *ngIf="isVideo(file)" class="expand" > 
+                <img src="assets/deleteicon.svg" (click)="deleteImg(file)" alt="Delete Icon"> 
+                <img src="assets/videoPlay.svg" style="width:27px" (click)="expandImg(i)"  alt="Expand Icon"> 
+              </div> 
+
+                <div class="popup-image"> 
+                 <span (click)="closePopup(i)" class="close">&times;</span> 
+                 <div class="file-container"> 
+                  <img *ngIf="isImage(file)" [src]="file.url" alt="{{ file.name }}"> 
+                  <video class="videoInModal" *ngIf="isVideo(file)" [src]="file.url" muted controls></video> 
+                 </div> 
+                </div> 
+
+            </div> 
+             
+          </div> 
+         </div> 
+         <div class="border"> 
+           <div class="text">الملفات ({{fileNo}}) </div> 
+           <div class="files"> 
+            <div *ngFor="let file of otherFiles" style="max-width: max-content; position: relative;" > 
+             <a class="preview-file" (click)="previewFile(file)">{{ file.name }}</a> 
+             <img src="assets/deletefile.svg" class="deletefile" style="position: absolute;" (click)="deleteImg(file)" />
+
+            </div> 
+           </div> 
+          </div> 
+   
+</div>

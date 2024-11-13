@@ -1,0 +1,17 @@
+
+
+
+<div class="d-flex flex-column gap-3">
+    <!-- <label id="desc">  <img *ngIf="iconappear" src="assets/squarecheck.svg" class="ps-2"/>{{label}} </label> -->
+    <div class="form-check" *ngIf="isIconAppear">
+      <input class="form-check-input" type="checkbox" [(ngModel)]="isCheckboxChecked"   id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        {{label}}
+      </label>
+    </div>
+
+    <textarea  *ngIf="isCheckboxChecked" class="textarea" id="{{name}}" name="{{name}}" rows="4" cols="50" placeholder="{{placeholder}}" [formControl]="control"></textarea>
+    <ng-content  *ngIf="isCheckboxChecked" select="[uploadfile]"></ng-content>
+
+
+  </div>

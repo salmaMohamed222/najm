@@ -1,0 +1,24 @@
+.contain {
+    /* height: 308px; */
+    border-radius: 10px;
+    background: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 799px;
+    padding: 24px;
+}
+.header {
+    background: #33835C;
+    padding: 17px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    width: 799px;
+}

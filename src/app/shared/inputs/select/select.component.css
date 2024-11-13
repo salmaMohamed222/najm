@@ -1,0 +1,154 @@
+
+
+ /* dropdown */
+ ::ng-deep .p-dropdown {
+   width: 100%;
+   border-radius: 10px;
+   height: 48px;
+  }
+ ::ng-deep .p-overlay  {
+     width: 100%;
+  }
+  ::ng-deep ul {
+    margin-bottom: 0px;
+    padding-left: 0px;
+  }
+  ::ng-deep .p-dropdown-item.p-highlight {
+    color: #33835C !important;
+    background: #daf6e8e9 !important;
+}
+::ng-deep .p-dropdown-item:hover {
+  color: #33835C !important; 
+  background: #d7f0e46e !important;
+}
+::ng-deep .p-dropdown:not(.p-disabled):hover {
+  border: 1px solid #d1d5db;
+}
+::ng-deep .p-dropdown:not(.p-disabled).p-focus {
+  box-shadow: none;
+  border: 2px solid #33835c96;
+}
+
+::ng-deep .p-inputwrapper > div > span {
+  color: #656565;
+  text-align: right;
+  font-family: 'Tajawal';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+::ng-deep .p-dropdown-items-wrapper {
+  padding-bottom: 0px;
+  margin-bottom: 40px;
+  max-height: 150px !important;
+  
+
+}
+::ng-deep .p-dropdown-panel .p-dropdown-items .p-dropdown-item:not(.p-highlight):not(.p-disabled).p-focus {
+  color: #4b5563;
+  background: transparent; 
+}
+
+/* style for today */
+::ng-deep .p-datepicker-today > span {
+  background: none !important;
+  color: #75777a !important;
+  border-color: none !important;
+}
+::ng-deep .p-datepicker-today > span:hover {
+  color: #33835C !important; 
+  background: #d7f0e46e !important;
+}
+
+
+/* style of year */
+::ng-deep .p-yearpicker > .p-yearpicker-year  {
+   color: #75777a;
+}
+
+::ng-deep .p-datepicker table td > span {
+   border: none;
+}
+
+::ng-deep .p-yearpicker > .p-yearpicker-year:not(.p-disabled):not(.p-highlight):hover {
+  color: #33835C !important; 
+  background: #d7f0e46e !important;
+}
+
+::ng-deep .p-datepicker .p-yearpicker .p-yearpicker-year.p-highlight {
+ color: #33835c;
+  background: #d7f0e46e;
+}
+
+::ng-deep .p-yearpicker > .p-yearpicker-year:not(.p-disabled):focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: none !important;
+}
+
+/* style of month */
+::ng-deep .p-monthpicker > .p-monthpicker-month:not(.p-disabled):not(.p-highlight):hover {
+  color: #33835c !important;
+  background: #d7f0e46e !important;
+}
+::ng-deep .p-monthpicker > .p-monthpicker-month:not(.p-disabled):focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: none !important;
+}
+
+
+
+
+
+
+
+/* select {
+  width: 100%;
+  border-radius: 10px;
+  height: 48px;
+  color: #656565;
+  text-align: right;
+  font-family: Tajawal;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+ -webkit-appearance: none !important;
+ -moz-appearance: none !important;
+ -ms-appearance:none !important;
+ appearance: none !important;
+ 
+ 
+ flex: 1;
+ padding: 0.5em;
+ cursor: pointer;
+ }
+ option {
+  -webkit-tap-highlight-color: #33835C !important;
+ }
+ select::-ms-expand {
+  display: none;
+ }
+ .select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background-color: #33835C;
+  overflow: hidden;
+  border-radius: .25em;
+ }
+ .select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  cursor: pointer;
+  pointer-events: none;
+  transition: .25s;
+ } */

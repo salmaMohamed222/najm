@@ -1,0 +1,7 @@
+<div class="cardd" [ngClass]="{'activecardd':divNumber !== null && activeDivs.includes(divNumber)}" (click)="toggleActive()">
+    <div class="border">
+      <img src="assets/{{icon}}.svg" />
+    </div>
+    <div id="titlesimplecard">{{ cardTitle }}</div>
+  </div>
+  

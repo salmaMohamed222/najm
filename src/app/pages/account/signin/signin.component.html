@@ -1,0 +1,111 @@
+<!-- <div class="main">
+   <img id="logoImage" src="assets/logo.svg"/>
+   <div id="card">
+   <div class="d-flex flex-column gap-1">
+      <span class="title">تسجيل الدخول</span>
+      <img style="margin-top: 5px;" src="assets/smallwhiteline.svg" />
+   </div>
+
+<form  id="form"  [formGroup]="signinForm" (ngSubmit)="formOperation($event)">
+<div class="flex">
+   <label class="label" for="email">البريد الإلكتروني</label>
+   <div class="input-group">
+      <input 
+      type="email"
+      [class.is-invalid]="signinForm.get('email')?.invalid && signinForm.get('email')?.touched"
+      formControlName="email"
+      class="input form-control"
+      id="email" name="email" >
+      <button class="btn button block" type="button" id="emailbutton"><img src="assets/emailicon.svg" /></button>
+      <div *ngIf="signinForm.get('email')?.errors?.['required']" class="error"> رجاء ادخل البريد الالكتروني</div>
+      <div *ngIf="signinForm.get('email')?.errors?.['pattern']" class="invalid-feedback">  رجاء ادخل البريد الالكتروني بالشكل الصحيح</div>
+      <div *ngIf="signinForm.get('email')?.hasError('emailNotFound')"class="invalid-feedback"> هذا الابريد الالكتروني ليس موجود</div>
+   </div>
+</div>
+
+<div class="flex">
+   <label class="label" for="password">الرقم السري</label>
+   <div class="input-group password">
+      <div><i class="bi bi-eye-slash-fill pass-icon" id="pass-icon" (click)="pass()"></i></div>
+      <input 
+      type="password"
+      [class.is-invalid]="signinForm.get('password')?.invalid && signinForm.get('password')?.touched"
+      formControlName="password"
+      class="input form-control"
+      id="password" name="password" >
+      <button class="btn button block" type="button" id="passwordbutton"><img src="assets/passwordicon.svg" /></button>
+
+      <div *ngIf="signinForm.get('password')?.errors?.['required']" class="invalid-feedback">رجاء ادخل الرقم السري</div>
+      <div *ngIf="signinForm.get('password')?.errors?.['minlength']" class="invalid-feedback">  الرقم السري يجب ان لا يقل عن ستة احروف</div>
+   </div>
+</div>
+
+<img src="assets/whiteline.svg" style="margin: 10px 0px;" />
+
+  <div class="d-flex justify-content-between col-12">
+   <app-full-button  [enable]="!signinForm.valid" type="submit" title="دخول" class=" col-5 ps-2"></app-full-button>
+   <app-white-button title="رجوع" routerLink="/home" class=" col-5 pe-2"></app-white-button>
+ </div>
+</form>
+
+   </div>
+</div> -->
+
+
+<div class="main">
+   <img id="logoImage" src="assets/logo.svg"/>
+   <div class="col-sm-12 col-md form_section">
+   <div class="cardd" >
+      <div class="d-flex flex-column">
+         <span class="title">تسجيل الدخول</span>
+         <div style="margin-top: 8px; width: 210px; height: 1px; background-color: rgba(0, 0, 0, 0.10);"></div>
+        </div>
+   
+   <form  id="form"  [formGroup]="signinForm" (ngSubmit)="formOperation($event)">
+   <div class="flex">
+      <label class="label" for="email">البريد الإلكتروني</label>
+      <div class="input-group">
+         <input 
+         type="email"
+         [class.is-invalid]="signinForm.get('email')?.invalid && signinForm.get('email')?.touched"
+         formControlName="email"
+         class="input form-control"
+         id="email" name="email" >
+         <button class="btn button block" type="button" id="emailbutton"><img src="assets/emailicon.svg" /></button>
+         <div *ngIf="signinForm.get('email')?.errors?.['required']" class="invalid-feedback"> رجاء ادخل البريد الالكتروني</div>
+         <div *ngIf="signinForm.get('email')?.errors?.['pattern']" class="invalid-feedback">  رجاء ادخل البريد الالكتروني بالشكل الصحيح</div>
+         <div *ngIf="signinForm.get('email')?.hasError('emailNotFound')"class="invalid-feedback"> هذا الابريد الالكتروني ليس موجود</div>
+      </div>
+   </div>
+   
+   <div class="flex">
+      <label class="label" for="password">الرقم السري</label>
+      <div class="input-group password">
+         <div><i class="bi bi-eye-slash-fill pass-icon" id="pass-icon" (click)="pass()"></i></div>
+         <input 
+         type="password"
+         [class.is-invalid]="signinForm.get('password')?.invalid && signinForm.get('password')?.touched"
+         formControlName="password"
+         class="input form-control"
+         id="password" name="password" >
+         <button class="btn button block" type="button" id="passwordbutton"><img src="assets/passwordicon.svg" /></button>
+   
+         <div *ngIf="signinForm.get('password')?.errors?.['required']" class="invalid-feedback">رجاء ادخل الرقم السري</div>
+         <div *ngIf="signinForm.get('password')?.errors?.['minlength']" class="invalid-feedback">  الرقم السري يجب ان لا يقل عن ستة احروف</div>
+      </div>
+   </div>
+   
+   <div style="width: 100%; height: 1px; background-color: rgba(0, 0, 0, 0.10); margin: 10px 0px;"></div>
+   
+     <div class="d-flex justify-content-between col-12">
+      <app-green-button class="col-5" paddingg="24px 0px" borderRadius="10px" title="دخول" fontSize="20px" fontWeight="700" [isdisabled]="!signinForm.valid"></app-green-button>
+     <app-green-border icon="" class="col-5" paddingg="24px 0px"  borderRadius="10px" fontSize="20px" fontWeight="700"  ></app-green-border>
+    </div>
+   </form>
+   </div>
+  </div>
+  <div class="col-sm-12 col-md" style="height: 100vh;">
+     <img style="height: 100%; max-width: 100%;" src="assets/Union.svg" >
+  </div>
+
+</div>

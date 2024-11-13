@@ -1,0 +1,24 @@
+
+    <div class="main">
+      <img id="logoImage" src="assets/logo.svg"/>
+      <div id="card">
+        <div class="cards col-12" >
+            <div class="cardd col-sm-5 col-lg" [class.activecardd]="activeDiv == 'visitor'"  (click)="toggleActive('visitor')">
+                <img *ngIf="activeDiv == 'visitor'" class="checkicon" src="assets/check.svg"/> زائر</div>
+              
+            <div class="cardd col-sm-5 col-lg" [class.activecardd]="activeDiv === 'reportRef'"  (click)="toggleActive('reportRef')">
+              <img *ngIf="activeDiv === 'reportRef'" class="checkicon" src="assets/check.svg"/>مراجع البلاغات</div>
+
+            <div class="cardd col-sm-5 col-lg" [class.activecardd]="activeDiv === 'reportAuditor'" (click)="toggleActive('reportAuditor')">
+              <img *ngIf="activeDiv === 'reportAuditor'" class="checkicon" src="assets/check.svg"/>مدقق البلاغات</div>
+      
+            <div class="cardd col-sm-5 col-lg" [class.activecardd]="activeDiv === 'auditor'"  (click)="toggleActive('auditor')"> 
+              <img *ngIf="activeDiv === 'auditor'" class="checkicon" src="assets/check.svg"/> مدقق الحسابات</div>   
+            
+        </div>
+        <app-full-button title="التالي" class="w-50" [enable]="isButtonDisabled" (click)="navigateTo()"></app-full-button>
+        
+      </div>
+    </div>
+
+

@@ -1,0 +1,189 @@
+.contain { 
+  /* border-radius: 10px; */ 
+  /* background: #F6F6F6; */ 
+  /* width: 100%; */ 
+  /* margin-top: 15px; */ 
+  /* padding: 40px; */ 
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: nowrap; 
+  gap: 30px; 
+} 
+.label { 
+  color: #1E1E1E; 
+  text-align: right; 
+  font-family: Tajawal; 
+  font-size: 16px; 
+  font-style: normal; 
+  font-weight: 500; 
+  line-height: normal; 
+  width: 100%; 
+  margin-bottom: 12px; 
+} 
+.attach { 
+  border-radius: 10px; 
+  border: 1px solid #33835C; 
+  background: rgba(51, 131, 92, 0.10); 
+  padding: 12px 60px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  color: #33835C; 
+  font-family: Tajawal; 
+  font-size: 14px; 
+  font-style: normal; 
+  font-weight: 500; 
+  line-height: normal; 
+  width: max-content; 
+  cursor: pointer; 
+} 
+.text { 
+  color: #414345; 
+  text-align: right; 
+  font-family: Tajawal; 
+  font-size: 14px; 
+  font-style: normal; 
+  font-weight: 500; 
+  margin-bottom: 24px; 
+  /* width: max-content; */ 
+} 
+.border { 
+  padding: 24px 24px 24px 45px; 
+  border-radius: 10px; 
+  border: 1px solid #E6E6E6; 
+  background: #FFF; 
+} 
+.images , .files{ 
+  display: flex; 
+  gap: 32px; 
+  justify-content: start; 
+  align-items: flex; 
+  text-align: center; 
+  flex-wrap: wrap; 
+} 
+.files {
+  gap: 64px !important;
+}
+.preview-image { 
+  height: 100px;
+  width: 178px;
+  border-radius: 10px; 
+} 
+.preview-image:hover +.expand{ 
+  display: flex !important;  
+} 
+
+.expand { 
+  display: none !important; 
+  position: absolute; 
+  top: 37%;
+  gap: 15px;
+  left: 34%;
+  cursor: pointer;
+} 
+.expand:hover { 
+  display: flex !important; 
+} 
+.preview-image, .expand { 
+transition: opacity 0.3s ease; 
+} 
+
+.preview-image:hover { 
+opacity: 0.5; 
+} 
+
+.preview-file { 
+  width: max-content; 
+  padding: 14px 20px; 
+  border-radius: 10px; 
+  border: 1px solid rgba(215, 77, 82, 0.14); 
+  background: rgba(220, 96, 101, 0.10);  
+  color: #D74D52; 
+  text-align: right; 
+  font-family: Tajawal; 
+  font-size: 14px; 
+  font-style: normal; 
+  font-weight: 700; 
+  line-height: normal; 
+  display: flex; 
+  flex-wrap: wrap; 
+  cursor: pointer; 
+ 
+} 
+ 
+.input { 
+  display: flex; 
+  height: 48px; 
+  padding: 0px 16px; 
+  align-items: center; 
+  border-radius: 10px; 
+  border: 1px solid #DBDBDB; 
+  background: #FFF; 
+  color: #656565; 
+  text-align: right; 
+  font-family: Tajawal; 
+  font-size: 14px; 
+  font-style: normal; 
+  font-weight: 400; 
+  line-height: normal; 
+} 
+input[type="file"] { 
+  display: none; 
+} 
+
+.popup-image  { 
+  display:none; 
+  position: fixed; 
+  top:0; 
+  left:0; 
+  height: 100%; 
+  width: 100%; 
+  display: none; 
+  overflow: auto; 
+  background: rgb(0 0 0 / 94%); 
+  z-index: 122345678; 
+} 
+.popup-image > span { 
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  font-size: 40px;
+  color: #aaa; 
+  cursor: pointer; 
+  z-index: 100; 
+} 
+
+.popup-image > .file-container > img , .popup-image > .file-container > video { 
+position: absolute; 
+top: 8%; 
+left: 50%; 
+transform: translate(-50%, 0); 
+margin-top: 50px; 
+width: 70vw; 
+padding: 20px; 
+border-radius: 5px; 
+height: 70vh; 
+ 
+} 
+
+.close { 
+  
+  float: right; 
+  font-size: 28px; 
+  /* font-weight: 400;  */
+} 
+
+.close:hover, 
+.close:focus { 
+  color: black; 
+  text-decoration: none; 
+  cursor: pointer; 
+}
+.deletefile {
+  top: 14px;
+  left: -38px;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+}

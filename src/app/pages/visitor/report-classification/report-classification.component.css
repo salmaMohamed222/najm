@@ -1,0 +1,35 @@
+
+.cardd {
+  padding: 20px 0px 20px 20px;
+}
+/* .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+  justify-content: space-between;
+} */
+@media (max-width: 700px) {
+  .cardd {
+    width: 100%;
+  }
+}
+
+
+/* .cardd {
+  width: 30%;
+
+}
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+@media (max-width: 788px) {
+  .cardd {
+    width: 100%;
+  }
+} */
+

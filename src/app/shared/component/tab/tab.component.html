@@ -1,0 +1,30 @@
+
+<div class="d-flex justify-content-between flex-wrap gap-2">
+    <ng-content select="[title]"></ng-content>
+<div class="d-flex">
+    <div class="title" >طريقة العرض</div>
+<div class="d-flex " style="cursor: pointer;" *ngIf="appearTab">
+    <div [class.active]="index === 0" (click)="changeTab(0)" class="button">
+     <i class="bi bi-grid" style="font-size: 17px;"></i> افقية</div>
+    <div [class.active]="index === 1" (click)="changeTab(1)" class="button">
+     <i class="bi bi-view-stacked" style="font-size: 17px;"></i> رأسية</div>
+</div>
+</div>
+</div>
+
+<!-- content -->
+<div  *ngIf="appearTab; else anotherDiv" class="tab-content">
+    <div class="tab-body" [class.active]="index === 0">
+        <ng-content select="[content1]"></ng-content>
+    </div>
+    <div class="tab-body" [class.active]="index === 1">
+        <ng-content select="[content2]"></ng-content>
+    </div>
+  </div>
+  
+  
+   <ng-template #anotherDiv>
+    <div  class="tab-body">
+      <ng-content></ng-content>
+    </div>
+  </ng-template>

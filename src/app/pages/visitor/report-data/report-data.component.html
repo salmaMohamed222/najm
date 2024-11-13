@@ -1,0 +1,86 @@
+
+
+<app-visitor-structure subtitle="من فضلك, قم بملئ الإستمارة التالية">
+  <ng-container>
+    <form class="contain needs-validation" id="form" [formGroup]="reportdataForm" (ngSubmit)="formOperation($event)">
+      <div class="smallInput">
+        <div class="inputandlabel" >
+          <label class="label" for="country">المدينة</label>
+          <app-select optionLabel="label" [options]="country" name="country" class="boxselect d-flex flex-column col-sm-4 col-md-3 col-lg w-100" [control]="getCountry" 
+          [class.is-invalid]="getCountry.invalid && getCountry.touched"></app-select>
+          <!-- <div class="invalid-feedback" *ngIf="getCountry.invalid && getCountry.touched">required</div> -->
+         </div>
+  
+         <div class="inputandlabel">
+          <label class="label" for="branch">الفرع</label>
+          <app-select name="branch" [options]="bransh" [control]="getBranch"  class="boxselect d-flex flex-column col-sm-4 col-md-3 col-lg w-100"  
+          [class.is-invalid]="getBranch.invalid && getBranch.touched"></app-select>
+        </div>
+        <div class="inputandlabel">
+          <label class="label" for="Administration">الإدارة</label>
+          <app-select [control]="getAdminist"  name="Administration" [options]="Administration" id="Administration"  class="boxselect d-flex flex-column col-sm-4 col-md-3 col-lg w-100"
+          [class.is-invalid]="getAdminist.invalid && getAdminist.touched"></app-select>
+        </div>
+        <div class="inputandlabel">
+          <label class="label" for="chanel">القناة المستخدمة لرفع البلاغ</label>
+          <input formControlName="chanel" class="form-control input" type="text" id="chanel" name="chanel"  required placeholder="اسم القناة"
+          [class.is-invalid]="reportdataForm.get('chanel')?.invalid && reportdataForm.get('chanel')?.touched">
+        </div>
+      </div>
+     
+      <div class="input-group">
+          <label for="username" class="label">أسماء الأشخاص المشتبه بهم</label>
+          <button class="btn button" type="button" id="button-addon1"  (click)="onClick()"><i class="bi bi-plus-lg mb-1" style="color: #33835C;"></i></button>
+          <input  type="text" [(ngModel)]="username" formControlName="username" class="form-control input"  placeholder="اسم الشخص"  id="username" name="username" (keydown.enter)="onClick()"
+          [class.is-invalid]="getUsername.invalid && getUsername.touched">
+        </div>
+
+        <div *ngIf="usernames && usernames.length > 0" class="names">
+          <div *ngFor="let user of usernames" class="input-group" style="max-width: max-content;">
+            <button class="btn buttonexit" type="button" id="button-addon2" (click)="removeUsername(user)">
+              <i class="bi bi-x margintop" style="margin-top: 1px; margin-left: 4px;"></i>
+            </button>
+            <div class="nameText form-control ">{{ user }} </div>
+          </div>
+        </div>
+        <app-line></app-line>
+  
+        <div class="smallInput justStart">
+          <div class="inputandlabel">
+            <label class="label"  for="timeOfViolationWasCommitted">تاريخ إرتكاب المخالفة</label>
+            <app-calendar  name="timeOfViolationWasCommitted" [control]="gettimeOfViolationWasCommitted"
+            [class.is-invalid]="gettimeOfViolationWasCommitted.invalid && gettimeOfViolationWasCommitted.touched"
+            ></app-calendar>
+          </div>
+          <div class="inputandlabel">
+            <label class="label" for="DateOfKnowledgeViolation">تاريخ العلم بالمخالفة</label>
+            <app-calendar name="DateOfKnowledgeViolation" [control]="getDateOfKnowledgeViolation"
+            [class.is-invalid]="getDateOfKnowledgeViolation.invalid && getDateOfKnowledgeViolation.touched"></app-calendar>
+  
+          </div>
+          <div class="inputandlabel">
+            <label class="label" for="accidentViolationRegion"> مكان حدوث المخالفة </label>
+            <div style="position: relative;">
+              <input formControlName="accidentViolationRegion" class="form-control input" type="text" id="accidentViolationRegion" name="accidentViolationRegion" required placeholder="...شارع الامير ناصر بن ناصر"
+              [class.is-invalid]="getaccidentViolationRegion.invalid && getaccidentViolationRegion.touched">
+              <i  class="bi bi-geo-alt-fill icon"></i>
+            </div>
+          </div>
+        </div>
+        <app-line></app-line>
+  
+       <app-upload-file> </app-upload-file>
+       <app-line></app-line>
+  
+      <div>
+        <label for="textarea" class="label">نص البلاغ</label>
+         <app-textarea [control]="getTextarea" name="textarea" [isIconAppear]="false"
+         [class.is-invalid]="getTextarea.invalid && getTextarea.touched"></app-textarea>
+      </div>
+    </form>
+  </ng-container>
+</app-visitor-structure>
+
+
+
+<!-- (mousedown)="isSelectTouched = true" -->

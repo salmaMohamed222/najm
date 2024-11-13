@@ -1,0 +1,104 @@
+
+
+p-calendar {
+    width: 100%;
+    display: block;
+}
+::ng-deep input:focus {
+  border: none;
+  box-shadow:none;
+  border:2px solid #33835c96;
+}
+::ng-deep input:hover{
+    border: 1px solid #d1d5db;
+  }
+
+ ::ng-deep .p-calendar:not(.p-calendar-disabled).p-focus > .p-inputtext {
+    border:2px solid #33835c7e;
+    box-shadow:none;
+  }
+
+
+::ng-deep .p-calendar {
+    width: 100%;
+}
+::ng-deep .p-icon-wrapper  {
+  left: 16px;
+  display: flex;
+  justify-content: end;
+  /* top: 41%; */
+  color: #33835C;
+}
+/* ::ng-deep svg {
+    width: 24px;
+    height: 24px;
+} */
+
+/* ::ng-deep .inputandlabel > app-select > p-dropdown > div > div > .p-icon-wrapper >svg  {
+    width: 24px;
+    height: 24px;
+} */
+::ng-deep .p-inputtext {
+   padding:14px;
+}
+::ng-deep .p-input-icon-right > .p-inputtext {
+   padding: 16px;
+   border-radius: 10px;
+   height: 48px;
+}
+::ng-deep .p-component {
+    direction: rtl !important;
+}
+    
+/* picker */
+::ng-deep .p-datepicker table td.p-datepicker-today > span {
+    background: #33835c7e;
+    color: #4b5563;
+    border-color: transparent;
+}
+::ng-deep .p-datepicker:not(.p-disabled) table td span:not(.p-highlight):not(.p-disabled):hover {
+    color: #33835c;
+    background: #d7f0e46e;
+}
+::ng-deep .p-datepicker table td.p-datepicker-today > span {
+    background: #daf6e8e9;
+    color: #33835c;
+    border-color: transparent;
+}
+::ng-deep .p-datepicker table td > span.p-highlight {
+    color: #33835c;
+    background: #d7f0e46e;
+}
+::ng-deep .p-datepicker-group {
+    color: #75777a;
+}
+::ng-deep .p-datepicker:not(.p-datepicker-inline) .p-datepicker-header {
+    border-color: #33835c;
+}
+
+::ng-deep .p-datepicker-header > .p-datepicker-title > button {
+   color: #33835c; }
+::ng-deep .p-datepicker-header > button:enabled:hover {
+    border-color: none;
+    background: #d7f0e46e;
+    border-radius: 50% !important;
+    padding: 5px;
+}
+::ng-deep thead {
+    color: #33835cc4;
+}
+
+::ng-deep .p-datepicker-header .p-datepicker-title .p-datepicker-year:enabled:hover, ::ng-deep .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month:enabled:hover {
+        color: #36845dae;
+}    
+
+::ng-deep svg {
+    /* display: none; */
+    overflow: visible;
+  }
+  ::ng-deep .p-datepicker-header { 
+    direction: ltr; 
+}
+::ng-deep .p-datepicker-title {
+    color: #36845dae;
+}

@@ -1,0 +1,16 @@
+
+
+<app-visitor-structure>
+    <ng-container>
+       <!-- <div class="cards"> -->
+        <app-simple-card *ngFor="let item of classificationReport" class="cardd col-sm-12 col-md-4 col-xl-3"  [divNumber]='1' (click)="toggleActive(1)" cardTitle="{{item.text}}" icon="{{item.icon}}"></app-simple-card>  
+       <!-- </div> -->
+    </ng-container>
+</app-visitor-structure>
+
+ 
+
+
+
+
+

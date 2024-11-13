@@ -1,0 +1,44 @@
+<div class="contain">
+  <!-- <div class="d-flex justify-content-between" > -->
+
+         <app-tab class="w-100">
+          <ng-container title>
+            <div class="flex">
+              <div class="title">{{title}}</div>
+              <div  id="greentext">{{reportNo}}</div>
+              <div class="backgroundBox me-4">مقبول </div>  
+          </div>
+          </ng-container>
+         
+          <ng-container content1>
+            <div class="greentitle">تفاصيل البلاغ</div>
+            <div style="border: 1px solid rgba(0, 0, 0, 0.10); border-radius: 0px 0px 10px 10px; border-top: 0px; padding-bottom: 32px;" >
+             <div class="cardinsidecard">
+              <app-inside-tab [tabsArray]="tabs" (onTabChange)="tabChange($event)" class="w-100">
+              </app-inside-tab>
+             </div>
+            <div class="body">
+              <div *ngIf="activatedTabIndex == 0">
+                <app-tab-card paddingg="0px" bordder="" [opacityy]=1 ></app-tab-card>
+              </div>
+              <div *ngIf="activatedTabIndex == 1">
+                <app-refreportdata></app-refreportdata>
+            </div>
+              <div *ngIf="activatedTabIndex == 2">
+                <app-refreportdata userRole="المراجع" name="عبدالله علي"></app-refreportdata>
+              </div>
+            </div>
+          </div>
+          </ng-container>
+          
+          <ng-container content2>
+              <div class="greentitle">تفاصيل البلاغ</div>
+              <app-tab-card [opacityy]=0 ></app-tab-card>  
+         </ng-container>
+         </app-tab>
+  <!-- </div> -->
+
+  <ng-content select="[addnotes]"></ng-content>
+
+
+</div>

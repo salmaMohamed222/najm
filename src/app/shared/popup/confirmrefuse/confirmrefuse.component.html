@@ -1,0 +1,23 @@
+<div class="header"> 
+    <span>نوع البلاغ</span>
+    <span (click)="closeDialog()"><i class="bi bi-x fs-2" style="cursor: pointer;"></i></span>
+  </div>
+  <!-- <div class="contain"> -->
+  <form class="contain" id="form" [formGroup]="inputForm">
+    <label id="desc" for="textarea">{{title}}</label>
+    <textarea
+    [class.is-invalid]="inputForm.get('textarea')?.invalid && inputForm.get('textarea')?.touched"
+     class="textarea" 
+     formControlName="textarea" 
+     id="textarea" name="textarea" rows="4" cols="50" 
+     placeholder="اكتب هنا" required> </textarea>
+     <div *ngIf="inputForm.get('textarea')?.errors?.['required']" class="invalid-feedback"> هذا الحقل مطلوب </div>
+
+
+<div style="display: flex; justify-content: end !important;" class="mt-2"> 
+  <p-toast [breakpoints]="{'920px': {width: '100%', right: '0', left: '0'}}"></p-toast>
+<button [disabled]="!inputForm.valid" (click)="showSuccess()" type="button" pButton pRipple  label="Success" class="btn button">تأكيد</button>
+
+</div>
+</form>
+<!-- </div> -->

@@ -1,0 +1,10 @@
+<!-- <button class="btn button" type="button" id="button-addon1"  (click)="method()"><i class="bi bi-plus-lg"></i></button>
+<input type="text" class="form-control input" placeholder="اسم الشخص" [(ngModel)]="name" [id]="name" [name]="name" (keydown.enter)="method()">
+ -->
+
+
+ <div class="input-group">
+    <label for="username" class="label">أسماء الأشخاص المشتبه بهم</label>
+    <button class="btn button" type="button" id="button-addon1"  (click)="executeMethod()"><i class="bi bi-plus-lg" style="color: #33835C;"></i></button>
+    <input type="text" class="form-control input" [placeholder]="placeholder"  [id]="name" [name]="name" (keydown.enter)="executeMethod()">
+ </div>

@@ -1,0 +1,93 @@
+.greenbutton {
+    border-radius: 5px;
+    background: #33835C;
+    box-shadow: 0px 0px 6px 0px rgba(160, 160, 160, 0.05);
+    height: 36px;
+    padding: 0px 15px;
+    color: #FFF;
+    font-family: Tajawal;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.15px;
+}
+.greenbutton:focus:active {
+    background-color: #FFF;
+    border: 2px solid #33835C;
+    color: #33835C;
+}
+#text {
+    color: #55565A;
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    
+}
+.checkicon {
+    background-color: #33835C;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bi-check-lg {
+    text-align: center;
+    color: #FFF;
+    font-size: 35px;
+    padding: 0px;
+}
+.semibutton {
+    border: 1px solid #33835C;
+    background: rgba(3, 166, 118, 0.05);
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 0px rgba(160, 160, 160, 0.05);
+    height: 36px;
+    padding: 0px 15px;
+    color: #33835C;
+    font-family: Tajawal;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.15px;
+
+}
+.semibutton:focus:active {
+    background: rgba(4, 133, 94, 0.282);
+}
+
+
+/* -- {----------------------------------- */
+.contain {
+    /* height: 308px; */
+    border-radius: 10px;
+    background: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 799px;
+    padding: 24px;
+}
+.header {
+    background: #33835C;
+    padding: 17px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    width: 799px;
+}

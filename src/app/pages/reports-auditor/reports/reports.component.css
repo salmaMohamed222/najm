@@ -1,0 +1,96 @@
+.contain {
+    padding: 83px 60px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.title {
+    color: rgba(0, 0, 0, 0.80);
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.button {
+    color: #FFF;
+    font-family: Tajawal;
+    font-size: 14.5px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.145px;
+    display: flex;
+    gap: 12px;
+    padding: 9px 17px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.80);
+    box-shadow: 0px 0px 6px 0px rgba(160, 160, 160, 0.05);
+}
+.text {
+    margin-left:12px;
+    color: rgba(0, 0, 0, 0.70);
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.oneline {
+    display: flex; 
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.label {
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Tajawal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    /* margin-left: 12px; */
+}
+
+.greenbutton {
+    border-radius: 5px;
+    background: #33835C;
+    box-shadow: 0px 0px 6px 0px rgba(160, 160, 160, 0.05);
+    height: 36px;
+    padding: 0px 15px 0px 14px;
+    color: #FFF;
+    font-family: Tajawal;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.15px;
+}
+
+@media (max-width: 600px) {
+    .oneline {
+        width: 100%;
+    }
+}
+@media (max-width: 700px) {
+    .cardd {
+        width: 100%;
+    }
+}
+
+/* p-ripple p-element p-paginator-first p-paginator-element p-link p-disabled */
+.p-ripple .p-element .p-paginator-prev .p-paginator-element .p-link .p-disabled {
+   
+}
+
+/* p-ripple p-element p-paginator-page p-paginator-element p-link p-highlight */
+/* p-ripple p-element p-paginator-page p-paginator-element p-link ng-star-inserted */

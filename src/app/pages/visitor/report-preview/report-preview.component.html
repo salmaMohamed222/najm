@@ -1,0 +1,29 @@
+<!-- <div class="box">
+    <div id="title">معاينة البلاغ </div>
+    <hr>
+    <div class="contain">
+      <app-white-card  [redirectPageNo]="0" href="reports" title="تصنيف البلاغ" [divs]="['غسل اموال او تمويل إرهاب','مخالفة لمدونة قواعد السلوك']"></app-white-card>
+      <app-white-card  [redirectPageNo]="1" title="نوع البلاغ" [divs]="['الإفصاح عن معلومات سرية بطريقة غير نظامية','سوء استخدام السلطة او اتخاذ القرار']"></app-white-card>
+      <app-white-card [redirectPageNo]="2" title="بيانات البلاغ" [divs]="[]" >
+        <div class="data">
+         <app-dataviewcard style="width: 100%;"></app-dataviewcard> 
+         <app-documents-supporting-the-suspicion style="width: 100%;"></app-documents-supporting-the-suspicion>
+        </div>
+      </app-white-card>
+    </div>
+</div> -->
+
+<app-visitor-structure>
+  <ng-container>
+    <div class="contain">
+      <app-white-card  [redirectPageNo]="0" href="reports" title="تصنيف البلاغ" [divs]="['غسل اموال او تمويل إرهاب','مخالفة لمدونة قواعد السلوك']"></app-white-card>
+      <app-white-card  [redirectPageNo]="1" title="نوع البلاغ" [divs]="['الإفصاح عن معلومات سرية بطريقة غير نظامية','سوء استخدام السلطة او اتخاذ القرار']"></app-white-card>
+      <app-white-card [redirectPageNo]="2" title="بيانات البلاغ" [divs]="[]" >
+        <div class="data">
+         <app-dataviewcard style="width: 100%;"></app-dataviewcard> 
+         <app-documents-supporting-the-suspicion background_color="#FDFDFD" style="width: 100%;"></app-documents-supporting-the-suspicion>
+        </div>
+      </app-white-card>
+    </div>
+  </ng-container>
+</app-visitor-structure>

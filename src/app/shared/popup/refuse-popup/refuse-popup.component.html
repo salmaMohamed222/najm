@@ -1,0 +1,13 @@
+<div class="header">
+    <span>نوع البلاغ</span>
+    <span (click)="closeDialog()"><i class="bi bi-x fs-2" style="cursor: pointer;"></i></span>
+</div>
+<div class="contain">
+        <!-- <img src="assets/check2.svg"/> -->
+        <div class="checkicon"><i class="bi bi-check-lg"></i></div>
+        <div id="text"> هل أنت متأكد من رفض البلاغ؟ </div>
+   <div class="d-flex col-12 justify-content-center gap-3">
+    <button class="btn greenbutton col-2"  (click)="onrefuse()"> نعم </button>
+    <button class="btn semibutton col-2"  (click)="onclick()"> لا </button>
+   </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="contain d-flex flex-column">
+    <!-- progress bar -->
+     <div class="progressbar">
+       <div class="progress" id="progress"></div>
+       <ng-container *ngFor="let title of titleArr, let i = index">
+        <div [class.px-0]="i===0" class="d-flex justify-content-center align-items-center background">
+          <div class="progress-step " [class.step-active]="i === 0" style="position: relative;">
+            <i class="bi bi-check-lg appear"></i>
+            <div class="progressBefore">{{i + 1}}</div>
+          </div>
+          <diV class="step-label" [class.step-label-active]="i === 0">{{title}}</diV>
+        </div>
+       </ng-container>
+     </div>
+     
+
+    <!-- steps -->
+    <div class="form-step form-step-active" >
+       <app-report-classification (activeDivsChange)="receiveActiveDivs($event)"></app-report-classification>
+      <div class="d-flex justify-content-between" style="margin-top: 40px;">
+        <app-green-border  routerLink="/visitor"  fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px"></app-green-border>
+        <app-green-button [isdisabled]="!(activeDivs.length > 0)"  [functionOnClick]="onNextFunction" fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px"  title="التالي" icon="bi bi-arrow-left"></app-green-button>
+      </div>
+    </div>
+
+     <div class="form-step">
+       <app-report-type (activeTypeDivsChange)="receiveActiveTypeDivs($event)"></app-report-type>
+     <div class="d-flex justify-content-between" style="margin-top: 40px;">
+      <app-green-border [functionOnClick]="onPrevFunction"  fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px" ></app-green-border>
+      <app-green-button [isdisabled]="!(activeTypeDivs.length > 0)" [functionOnClick]="onNextFunction" fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px" title="التالي" icon="bi bi-arrow-left"></app-green-button>
+    </div>
+     </div>
+
+    <div class="form-step">
+      <app-report-data (isFormValidChange)="onFormValidityChange($event)"></app-report-data>
+       <div class="d-flex justify-content-between" style="margin-top: 40px;">
+        <app-green-border [functionOnClick]="onPrevFunction" fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px"></app-green-border>
+        <app-green-button [isdisabled]="!isFormValid" [functionOnClick]="onNextFunction"  fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px" title="معاينة البلاغ"></app-green-button>
+      </div>
+    </div>
+
+    <div class="form-step">
+        <app-report-preview></app-report-preview>
+        <div class="d-flex justify-content-between" style="margin-top: 40px;">
+          <app-green-border [functionOnClick]="onPrevFunction" fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px"></app-green-border>
+          <app-green-button (click)="submit()" fontWeight="700" fontSize="16px" borderRadius="10px" paddingg="23px 26px" title="تأكيد"></app-green-button>
+        </div>
+       </div>
+      
+</div>

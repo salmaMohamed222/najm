@@ -1,0 +1,37 @@
+<div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">رقم البلاغ</th>
+          <th scope="col">نوع البلاغ</th>
+          <th scope="col">تاريخ البلاغ</th>
+          <th scope="col">عمر البلاغ</th>
+          <th scope="col">المدينة</th>
+          <th scope="col">الإدارة </th>
+          <th scope="col">الحالة</th>
+          <th scope="col">الفعاليات</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let report of getPaginatedReports()">
+        <tr>
+          <td>{{report.reportNo}}</td>
+          <td>{{report.reportType}}</td>
+          <td>{{report.reportDate}}</td>
+          <td>{{report.reportAge}}</td>
+          <td>{{report.country}}</td>
+          <td>{{report.adminst}}</td>
+          <td><div class="status" [ngClass]="{'orange': report.status === 'تحت الدراسة', 'gray': report.status === 'مغلقة',
+           'green': report.status === 'جديد', 'blue':report.status === 'مقبول', 'red':report.status === 'مرفوض'}">{{report.status}}</div></td>
+          <td class="greenHover"><div (click)="viewReport(report.reportNo)" style="cursor: pointer;" > عرض<i class="bi bi-eye-fill pe-1 fs-5 mt-3"></i></div></td>
+        </tr>
+      </tbody>
+    </table>
+  
+  
+  </div>
+  
+  
+  <div class="pagination card flex justify-content-center">
+    <p-paginator  (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="reports.length"></p-paginator>
+  </div>
+  

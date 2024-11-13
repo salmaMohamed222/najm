@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contain">
+        <div class="title">البلاغات</div>
+        <div class="d-flex justify-content-between align-items-center">
+         <div><app-breadcrumb subpage="البلاغات"></app-breadcrumb></div>
+          <button class="btn button" (click)="printPage()">تصدير <img src="assets/exporticon.svg"/></button>
+        </div>
+        
+        <div class="oneline">
+         <span style="margin-left: 12px;" class="text">ابحث هنا</span>
+         <hr style="flex: 1; margin: 0;">
+       </div>
+ 
+       <form class="oneline col-12" [formGroup]="myForm" style="flex-wrap: wrap; width: 100%;">
+        
+         <div class="oneline col-sm-5 col-lg-3 col-xl" >
+            <label  for="date" class="label">التاريخ</label>
+            <app-calendar class="col inputs w-100" [control]="getDate" name="date"></app-calendar>
+         </div>
+         <div class="oneline col-sm-5 col-lg-3 col-xl">
+           <label  for="Type" class="label">النوع</label>
+           <app-select [options]="type" class="col inputs w-100"  name="Type" [control]="getType"></app-select>
+        </div>
+         <div class="oneline col-sm-5 col-lg-3 col-xl"  >
+            <label  for="Status" class="label">الحالة</label>
+            <app-select [options]="status" class="col inputs w-100"  name="Status" id="statusss" [control]="getStatus"></app-select>
+         </div>
+         <div class="oneline col-sm-5 col-lg-3 col-xl"  >
+           <label  for="Country" class="label">المدينة</label>
+           <app-select [options]="country" class="col inputs  w-100"  name="Country" [control]="getCountry" ></app-select>
+        </div>
+         <div class="oneline col-sm-5 col-lg-3 col-xl"  >
+            <label  for="Noticeage" class="label">عمر البلاغ</label>
+            <app-select [options]="age" class="col inputs w-100"  name="Noticeage" [control]="getNoticeage" ></app-select>
+         </div>
+      
+         <div class="col" style="text-align: end;">
+            <button class="btn greenbutton" (click)="resetForm()"> إعادة تهيئة</button>  
+         </div>
+        </form>
+        <hr/>
+
+ 
+       <div class="oneline col-12 d-flex flex-wrap" style="gap: 20px !important;">
+         <app-colored-card class="cardd col-sm-5 col-lg" title="بلاغات مغلقة" number="9410"  image="Reportsicon" backgroundColor="#5F5F5F"></app-colored-card>
+         <app-colored-card class="cardd col-sm-5 col-lg" title="بلاغات مغلقة" number="9410"  image="doneicon" backgroundColor="#3865A3"> </app-colored-card>
+         <app-colored-card class="cardd col-sm-5 col-lg" title="بلاغات مغلقة" number="9410"  image="repairicon" backgroundColor="#EB974B"> </app-colored-card>
+         <app-colored-card class="cardd col-sm-5 col-lg" title="بلاغات مغلقة" number="9410"  image="exist2" backgroundColor="#FF6A6F"> </app-colored-card>
+       </div>
+ 
+
+<div class="d-flex flex-column gap-0 ">
+  
+<app-table></app-table>
+
+</div>
+
+ </div>
+ 
+</body>
+</html>

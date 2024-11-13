@@ -1,0 +1,40 @@
+
+.border {
+  border-radius: 50%;
+  background-color: #EBF3EF;
+  border: none !important;
+  width: max-content;
+  padding: 15px;
+
+}
+/* simple card css */
+.cardd {
+    border-radius: 24px;
+    border: 1px solid #EDEDED;
+    background: #F9F9F9;
+    padding: 44px 24px;
+    display: flex;
+    height: 215px;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    cursor: pointer;
+}
+.activecardd {
+  background-color: #33835C;
+  .border {
+    background-color:#EBF3EF;
+  }
+  #titlesimplecard  {
+    color: #FFF;
+  }
+}
+#titlesimplecard {
+    padding-top: 10px;
+    color: #191B1C;
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contain">
+        <div class="title">البلاغات</div>
+        <div class="d-flex justify-content-between align-items-center">
+          <div>breadcrumb</div>
+          <button class="btn button">تصدير <img src="assets/exporticon.svg"/></button>
+        </div>
+        
+        <div class="oneline">
+         <span style="margin-left: 12px;" class="text">ابحث هنا</span>
+         <hr style="flex: 1; margin: 0;">
+       </div>
+ 
+       <div class="oneline col-12">
+          <!-- <div class="oneline col-sm-6 col-md-4 col-lg-3 col-xl" >
+             <label  for="date" class="label">التاريخ</label>
+             <app-calendar ></app-calendar>
+          </div> -->
+          <div class="oneline col-sm-5 col-md-3 col-xl" >
+             <label  for="type" class="label">النوع</label>
+             <app-select class="col"  name="type" ></app-select>
+          </div>
+          <div class="oneline col-sm-5 col-md-3 col-xl" >
+            <label  for="type" class="label">النوع</label>
+            <app-select class="col"  name="type" ></app-select>
+         </div>
+          <div class="oneline col-sm-5 col-md-3 col-xl" >
+             <label  for="status" class="label">الحالة</label>
+             <app-select class="col"  name="status" ></app-select>
+          </div>
+          <div class="oneline col-sm-5 col-md-3 col-xl" >
+            <label  for="country" class="label">المدينة</label>
+            <app-select class="col"  name="country" ></app-select>
+         </div>
+          <div class="oneline col-sm-5 col-md-3 col-xl" >
+             <label  for="noticeage" class="label">عمر البلاغ</label>
+             <app-select class="col"  name="noticeage" ></app-select>
+          </div>
+       
+          <div class="col" style="text-align: end;">
+             <button class="btn greenbutton" > إعادة تهيئة</button>  
+          </div>
+        </div>
+        <hr/>
+ 
+       <div class="oneline col-12">
+         <app-colored-card class="cardd col-sm-5 col-lg" title="بلاغات مغلقة" number="9410" desc="منذ السنة الماضية" image="Reportsicon" backgroundColor="#5F5F5F"></app-colored-card>
+         <app-colored-card class="cardd col-sm-5 col-lg" title="بلاغات مغلقة" number="9410" desc="منذ السنة الماضية" image="doneicon" backgroundColor="#3865A3"> </app-colored-card>
+         <app-colored-card class="cardd col-sm-5 col-lg" title="بلاغات مغلقة" number="9410" desc="منذ السنة الماضية" image="repairicon" backgroundColor="#EB974B"> </app-colored-card>
+         <app-colored-card class="cardd col-sm-5 col-lg" title="بلاغات مغلقة" number="9410" desc="منذ السنة الماضية" image="exist2" backgroundColor="#FF6A6F"> </app-colored-card>
+       </div>
+ 
+
+<div class="d-flex flex-column gap-0 ">
+  
+<app-table></app-table>
+
+</div>
+
+ </div>
+ 
+</body>
+</html>

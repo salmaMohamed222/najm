@@ -1,0 +1,24 @@
+<div class="contain">
+    <div>
+       <div class="title">البلاغات</div>
+       <div class="d-flex justify-content-between align-items-center mb-4">
+         <div><app-breadcrumb></app-breadcrumb></div>
+         <app-semitransparent-button></app-semitransparent-button>
+       </div>
+   
+       <app-grayestablishcard [tabs]="['بيانات مدقق البلاغات','بيانات مراجع البلاغات','تفاصيل البلاغ']">
+        <ng-container addnotes>
+          <div class="bigdiv">
+            <div class="smalldiv">
+            <app-textarea [iconappear]="true" class="w-100" label="إضافة ملاحظات"  name="addnotes" placeholder="اكتب هنا">
+               <ng-container uploadfile>
+                  <app-upload-file class="w-100"></app-upload-file>
+               </ng-container>
+            </app-textarea>
+            </div>
+          </div>
+        </ng-container>
+       </app-grayestablishcard>
+    </div>
+   </div>
+   

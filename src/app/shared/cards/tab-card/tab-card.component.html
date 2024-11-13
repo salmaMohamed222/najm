@@ -1,0 +1,24 @@
+
+  <!-- <div class="title">تفاصيل البلاغ</div> -->
+<div  [ngStyle]="{'border':bordder, 'padding':paddingg}">
+  <!-- <app-accordion *ngIf="refreportappear" [cord]="false"  class="w-100" title="تصنيف البلاغ" (accordionToggled)="handleAccordionToggle($event)">
+    <app-refreportdata></app-refreportdata>
+  </app-accordion> -->
+  <!-- <hr *ngIf="refreportappear" [ngStyle]="{'opacity': opacityy}"/> -->
+   <app-accordion class="w-100" title="تصنيف البلاغ" (accordionToggled)="handleAccordionToggle($event)">
+      <app-white-card bordder=""  [cord]="true"   [divs]="['غسل اموال او تمويل إرهاب','مخالفة لمدونة قواعد السلوك']"></app-white-card>
+    </app-accordion>
+    <hr [ngStyle]="{'opacity': opacityy}"/>
+    <app-accordion class="w-100" title="نوع البلاغ"  (accordionToggled)="handleAccordionToggle($event)">
+      <app-white-card bordder=""  [cord]="true"  [divs]="['الإفصاح عن معلومات سرية بطريقة غير نظامية','سوء استخدام السلطة او اتخاذ القرار']"></app-white-card>
+    </app-accordion>
+    <hr [ngStyle]="{'opacity': opacityy}"/>
+    <app-accordion class="w-100" title="بيانات البلاغ">
+      <app-dataviewcard  borderr="1px solid #E6E6E6" paddingg="16px"></app-dataviewcard>
+    </app-accordion>
+    <hr [ngStyle]="{'opacity': opacityy}"/>
+    <app-accordion class="w-100" title="المستندات الداعمة للإشتباه ">
+      <app-documents-supporting-the-suspicion background_color="#fff" [cord]="true"></app-documents-supporting-the-suspicion>
+    </app-accordion>
+</div>
+  

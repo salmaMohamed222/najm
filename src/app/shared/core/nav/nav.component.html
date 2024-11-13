@@ -1,0 +1,16 @@
+
+<div id="nav" *ngIf="nav.visible" (click)="onClick()">
+    <div class="bgicons">EN</div>
+    <div class="bgicons"><img src="assets/bell.svg" class="bellimage" style="position: relative;"/></div>
+    <!-- /account -->
+    <div class="bgicons" *ngIf="userRole == 'زائر'"><img src="assets/logoutt.svg" routerLink="/home" style="font-size: 24px;"></div>
+    <div class="flex" *ngIf="userRole !== 'زائر'">
+        <div class="image"><img src="assets/userimage.svg" /></div>
+        <div class="d-flex flex-column">
+            <span id="name">محمد الرائد</span>
+            <span id="role"> {{userRole }}</span>
+        </div>
+        <img routerLink="/home" src="assets/logoutt.svg" class="logouticon" style="cursor: pointer;" />
+    </div>
+    <img id="logoImage" src="assets/logo.svg" />
+ </div>

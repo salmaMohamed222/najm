@@ -1,0 +1,12 @@
+<div class="boxdata" [ngStyle]="{'background':background_color}">
+    <div class="d-flex align-items-center" *ngIf="!cord">
+        <img src="assets/mstndat.svg" class="ps-2" />  
+        <span class="texttitle">المستندات الداعمة للإشتباه </span>
+    </div>
+
+    <div *ngIf="!cord" style="border: 1px solid rgba(0, 0, 0, 0.09); width: 100%;"></div>              
+
+    <app-photo-and-files class="w-100"></app-photo-and-files>
+  </div>
+
+ 

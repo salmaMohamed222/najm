@@ -1,0 +1,33 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 24.5px 18px;
+    flex-wrap: nowrap;
+    border-radius: 12px;
+    background: backgroundColor;
+    gap: 20px;
+}
+.title {
+    color: #FFF;
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+}
+.number {
+    color: #FFF;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.72px;
+}
+.desc {
+    color: #FFF;
+    font-family: Tajawal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}

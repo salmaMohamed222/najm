@@ -1,0 +1,89 @@
+.contain { 
+    /* height: 308px; */
+    border-radius: 10px;
+    background: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 799px;
+    padding: 24px;
+}
+.header {
+    background: #33835C;
+    padding: 17px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    width: 799px;
+}
+#desc {
+    color: #1E1E1E;
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+.button {
+    color: #FFF;
+    font-family: Tajawal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0px 26px;
+    height: 40px;
+    border-radius: 7px;
+    background: #33835C;   
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: max-content;
+
+}
+.button:focus:active {
+    background: #33835C; 
+    color:#FFF;
+}
+.textarea {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #DBDBDB;
+    background: #FFF;
+    direction: rtl !important;
+    padding: 15px;
+    resize: none;
+    width: 100%;
+  }
+  .textarea:focus {
+    border: 2px solid #cecdcd;
+    outline: none !important;
+  }
+  .is-invalid { 
+    border: 2px solid rgba(255, 0, 0, 0.701); 
+  } 
+  .invalid-feedback { 
+    color: rgba(255, 0, 0, 0.801) !important; 
+    font-size: 16px; 
+    font-weight: 500; 
+  }
+  ::ng-deep .p-toast-message-icon {
+    margin-left: 13px;
+    margin-top:3px; 
+}    
+::ng-deep .p-toast-message-text {
+    font-family: 'Tajawal' !important;
+}
+::ng-deep .p-toast-message-text {
+  color: #33835C !important;
+}
